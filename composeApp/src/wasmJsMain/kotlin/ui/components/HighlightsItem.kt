@@ -59,7 +59,7 @@ fun HighlightsItem() {
                 Text(
                     "Project 1 is a project of something that I made for something. This project made using this language and some libraries. Made in some month and year.",
                     Modifier.fillMaxWidth(0.7f),
-                    fontSize = 12.sp,
+                    fontSize = 16.sp,
                     textAlign = TextAlign.End
                 )
             }

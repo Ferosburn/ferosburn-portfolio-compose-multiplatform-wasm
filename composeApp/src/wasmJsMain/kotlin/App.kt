@@ -2,12 +2,9 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
@@ -25,6 +22,7 @@ import kotlinx.coroutines.launch
 import ui.components.TopNavigationBar
 import ui.home.Hero
 import ui.projects.Highlights
+import ui.projects.Projects
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -103,26 +101,6 @@ fun AboutPage() {
         when (page) {
             0 -> Profile()
             1 -> AboutPortfolio()
-        }
-    }
-}
-
-@Composable
-fun Projects() {
-    Column(Modifier.fillMaxWidth()) {
-        Spacer(Modifier.height(100.dp))
-        LazyColumn(
-            Modifier.fillMaxWidth(0.6f).align(Alignment.CenterHorizontally).background(Color.Cyan)
-                .border(2.dp, Color.Blue)
-        ) {
-            item {
-                Text("Projects Section")
-                Spacer(Modifier.height(20.dp))
-            }
-            items(30) {
-                Text("Project $it")
-                Spacer(Modifier.height(20.dp))
-            }
         }
     }
 }
