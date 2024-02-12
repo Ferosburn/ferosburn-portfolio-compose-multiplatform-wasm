@@ -1,10 +1,8 @@
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -15,7 +13,6 @@ import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -27,6 +24,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
+import ui.components.TopNavigationBar
+import ui.home.Hero
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalComposeUiApi::class)
 @Composable
@@ -67,10 +66,10 @@ fun App() {
             TopNavigationBar(Modifier.fillMaxWidth(), toPage = toPage, setPageText = setPageText)
 
 //            Footer(Modifier.align(Alignment.BottomCenter))
-            Text(
-                "screen height in pixel: $screenHeight px, screen width in pixel: $screenWidth px",
-                Modifier.align(Alignment.BottomCenter)
-            )
+//            Text(
+//                "screen height in pixel: $screenHeight px, screen width in pixel: $screenWidth px",
+//                Modifier.align(Alignment.BottomCenter)
+//            )
         }
     }
 }
@@ -78,11 +77,7 @@ fun App() {
 // pages
 @Composable
 fun HomePage() {
-    LazyColumn(Modifier.fillMaxWidth()) {
-        item {
-            Hero()
-        }
-    }
+    Hero()
 }
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -111,14 +106,6 @@ fun AboutPage() {
             0 -> Profile()
             1 -> AboutPortfolio()
         }
-    }
-}
-
-// in home page
-@Composable
-fun Hero() {
-    Box(Modifier.fillMaxWidth().fillMaxHeight()) {
-        Text("Hero Section", Modifier.align(Alignment.Center))
     }
 }
 
@@ -172,30 +159,3 @@ fun Footer(
 ) {
     Box(modifier.fillMaxWidth().height(100.dp).background(Color.Green).border(2.dp, Color.Red))
 }
-
-@Composable
-fun TopNavigationBar(
-    modifier: Modifier = Modifier,
-    toPage: (Int) -> Unit = {},
-    setPageText: (Int) -> Unit = {}
-) {
-    val onClick: (Int) -> Unit = { index ->
-        toPage(index)
-        setPageText(index)
-    }
-    Row(
-        modifier,
-        horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally)
-    ) {
-        TextButton(onClick = { onClick(0) }) {
-            Text("Home")
-        }
-        TextButton(onClick = { onClick(1) }) {
-            Text("Projects")
-        }
-        TextButton(onClick = { onClick(2) }) {
-            Text("About")
-        }
-    }
-}
-
