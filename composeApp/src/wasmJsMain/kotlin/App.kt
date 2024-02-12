@@ -18,16 +18,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 import ui.components.TopNavigationBar
 import ui.home.Hero
+import ui.projects.Highlights
 
-@OptIn(ExperimentalFoundationApi::class, ExperimentalComposeUiApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun App() {
     val pageText = remember { mutableStateOf("") }
@@ -36,9 +35,9 @@ fun App() {
 
     val pages = remember { setOf("Home", "Projects", "About") }
 
-    val configuration = LocalWindowInfo.current
-    val screenHeight = remember { configuration.containerSize.height }
-    val screenWidth = remember { configuration.containerSize.width }
+//    val configuration = LocalWindowInfo.current
+//    val screenHeight = remember { configuration.containerSize.height }
+//    val screenWidth = remember { configuration.containerSize.width }
 
     val setPageText: (Int) -> Unit = { page ->
         pageText.value = pages.elementAt(page)
@@ -86,7 +85,6 @@ fun ProjectsPage() {
     val pagerState = rememberPagerState(pageCount = { 2 })
 
     VerticalPager(
-        modifier = Modifier.background(Color.Magenta).border(1.dp, Color.Green)/*fillMaxHeight()*/,
         state = pagerState
     ) { page ->
         when (page) {
@@ -106,14 +104,6 @@ fun AboutPage() {
             0 -> Profile()
             1 -> AboutPortfolio()
         }
-    }
-}
-
-// in projects page
-@Composable
-fun Highlights() {
-    Box(Modifier.fillMaxWidth().fillMaxHeight().background(Color.Cyan).border(2.dp, Color.Blue)) {
-        Text("Highlight Section", Modifier.align(Alignment.Center))
     }
 }
 
