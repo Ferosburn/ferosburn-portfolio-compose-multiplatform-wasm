@@ -1,15 +1,12 @@
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -19,6 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
+import ui.about.AboutPortfolio
+import ui.about.Profile
 import ui.components.TopNavigationBar
 import ui.home.Hero
 import ui.projects.Highlights
@@ -32,10 +31,6 @@ fun App() {
     val coroutineScope = rememberCoroutineScope()
 
     val pages = remember { setOf("Home", "Projects", "About") }
-
-//    val configuration = LocalWindowInfo.current
-//    val screenHeight = remember { configuration.containerSize.height }
-//    val screenWidth = remember { configuration.containerSize.width }
 
     val setPageText: (Int) -> Unit = { page ->
         pageText.value = pages.elementAt(page)
@@ -61,12 +56,6 @@ fun App() {
             }
 
             TopNavigationBar(Modifier.fillMaxWidth(), toPage = toPage, setPageText = setPageText)
-
-//            Footer(Modifier.align(Alignment.BottomCenter))
-//            Text(
-//                "screen height in pixel: $screenHeight px, screen width in pixel: $screenWidth px",
-//                Modifier.align(Alignment.BottomCenter)
-//            )
         }
     }
 }
@@ -103,27 +92,4 @@ fun AboutPage() {
             1 -> AboutPortfolio()
         }
     }
-}
-
-// in about page
-@Composable
-fun Profile() {
-    Box(Modifier.fillMaxWidth().fillMaxHeight()) {
-        Text("Profile Section", Modifier.align(Alignment.Center))
-    }
-}
-
-@Composable
-fun AboutPortfolio() {
-    Box(Modifier.fillMaxWidth().fillMaxHeight()) {
-        Text("About Portfolio Section", Modifier.align(Alignment.Center))
-    }
-}
-
-// in all page / component
-@Composable
-fun Footer(
-    modifier: Modifier = Modifier
-) {
-    Box(modifier.fillMaxWidth().height(100.dp).background(Color.Green).border(2.dp, Color.Red))
 }
