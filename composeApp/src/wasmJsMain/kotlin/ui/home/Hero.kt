@@ -4,13 +4,13 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun Hero() {
@@ -19,11 +19,14 @@ fun Hero() {
         Text(
             "Welcome to Ferosburn’s Project Archive",
             Modifier.align(Alignment.TopCenter),
-            style = MaterialTheme.typography.h4
+            fontSize = 36.sp
         )
         // bottom left quote? it's more like author's mumbling
         Text(
-            "You might say it’s a portfolio. But to be honest, I believe it more like an archive than a portfolio. I am bad at self-assessment. But I believe you can assess my skills by watching my results. If you need me, you can contact me.",
+            "You might say it’s a portfolio. But to be honest, I believe it more like an " +
+                    "archive than a portfolio. I am bad at self-assessment. But I believe you " +
+                    "can assess my skills by watching my results. If you need me, you can " +
+                    "contact me.",
             Modifier.align(Alignment.BottomStart).fillMaxWidth(0.4f)
         )
         // bottom right site description
