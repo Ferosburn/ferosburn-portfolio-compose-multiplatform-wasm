@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -26,7 +27,7 @@ fun Highlights() {
             .padding(24.dp, 96.dp, 24.dp, 24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Projects Highlight", fontSize = 36.sp)
+        Text("Projects Highlight", fontSize = 36.sp, color = MaterialTheme.colorScheme.onBackground)
         Spacer(Modifier.height(48.dp))
         LazyHorizontalGrid(
             GridCells.Fixed(2),

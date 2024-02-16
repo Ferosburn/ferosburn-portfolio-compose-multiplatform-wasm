@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,7 +20,8 @@ fun Hero() {
         Text(
             "Welcome to Ferosburn’s Project Archive",
             Modifier.align(Alignment.TopCenter),
-            fontSize = 36.sp
+            fontSize = 36.sp,
+            color = MaterialTheme.colorScheme.onBackground
         )
         // bottom left quote? it's more like author's mumbling
         Text(
@@ -27,7 +29,8 @@ fun Hero() {
                     "archive than a portfolio. I am bad at self-assessment. But I believe you " +
                     "can assess my skills by watching my results. If you need me, you can " +
                     "contact me.",
-            Modifier.align(Alignment.BottomStart).fillMaxWidth(0.4f)
+            Modifier.align(Alignment.BottomStart).fillMaxWidth(0.4f),
+            color = MaterialTheme.colorScheme.onBackground
         )
         // bottom right site description
         Text(
@@ -36,7 +39,8 @@ fun Hero() {
                     "This site developed using Compose Mutliplatform, powered by Kotlin/Wasm\n" +
                     "Last update: MMMM YYYY",
             Modifier.align(Alignment.BottomEnd).fillMaxWidth(0.4f),
-            textAlign = TextAlign.End
+            textAlign = TextAlign.End,
+            color = MaterialTheme.colorScheme.onBackground
         )
     }
 }

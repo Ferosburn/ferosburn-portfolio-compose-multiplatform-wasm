@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -32,7 +33,7 @@ fun Profile() {
         Modifier.fillMaxWidth().padding(24.dp, 96.dp, 24.dp, 0.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("About Developer", fontSize = 36.sp)
+        Text("About Developer", fontSize = 36.sp, color = MaterialTheme.colorScheme.onBackground)
         Box(Modifier.weight(1f), contentAlignment = Alignment.Center) {
             Row(
                 Modifier.widthIn(max = 1024.dp).heightIn(max = 360.dp),
@@ -43,12 +44,24 @@ fun Profile() {
                 ) // TODO: replace with image/async image
                 Spacer(Modifier.width(36.dp))
                 Column {
-                    Text("Su'udi Khoirul Anam", fontSize = 36.sp)
+                    Text(
+                        "Su'udi Khoirul Anam",
+                        fontSize = 36.sp,
+                        color = MaterialTheme.colorScheme.onBackground
+                    )
                     Spacer(Modifier.height(8.dp))
-                    Row {
-                        Icon(Icons.Outlined.Place, contentDescription = null)
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(
+                            Icons.Outlined.Place,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onBackground
+                        )
                         Spacer(Modifier.width(8.dp))
-                        Text("Yogyakarta, Indonesia", fontSize = 24.sp)
+                        Text(
+                            "Yogyakarta, Indonesia",
+                            fontSize = 24.sp,
+                            color = MaterialTheme.colorScheme.onBackground
+                        )
                     }
                     Spacer(Modifier.height(24.dp))
                     Text(
@@ -61,7 +74,8 @@ fun Profile() {
                                 "back-end development. I have a dream of becoming a front-end " +
                                 "engineer or software engineer in general.",
                         Modifier.weight(1f),
-                        fontSize = 16.sp
+                        fontSize = 16.sp,
+                        color = MaterialTheme.colorScheme.onBackground
                     )
                     Row(
                         Modifier.fillMaxWidth(),
@@ -71,7 +85,9 @@ fun Profile() {
                             Icon(
                                 Icons.Outlined.Place,
                                 contentDescription = null,
-                                Modifier.clickable { openLinkToNewTab("https://github.com") })
+                                Modifier.clickable { openLinkToNewTab("https://github.com") },
+                                tint = MaterialTheme.colorScheme.onBackground
+                            )
                         }
                     }
                 }

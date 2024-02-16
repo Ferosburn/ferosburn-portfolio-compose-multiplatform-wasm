@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -23,7 +24,7 @@ fun Projects() {
         Modifier.fillMaxWidth().padding(24.dp, 96.dp, 24.dp, 0.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Projects", fontSize = 36.sp)
+        Text("Projects", fontSize = 36.sp, color = MaterialTheme.colorScheme.onBackground)
         Spacer(Modifier.height(48.dp))
         LazyColumn(
             Modifier.widthIn(max = 1024.dp),
