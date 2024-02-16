@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.DarkMode
@@ -25,12 +24,10 @@ import androidx.compose.ui.unit.dp
 import kotlinx.browser.localStorage
 import kotlinx.coroutines.launch
 import theme.AppTheme
-import ui.about.AboutPortfolio
-import ui.about.Profile
+import ui.about.AboutPage
 import ui.components.TopNavigationBar
-import ui.home.Hero
-import ui.projects.Highlights
-import ui.projects.Projects
+import ui.home.HomePage
+import ui.projects.ProjectsPage
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -40,15 +37,8 @@ fun App() {
     val localThemeKeyValue: Boolean = localStorage.getItem(themeKey).toBoolean()
     var isDarkMode by remember { mutableStateOf(localThemeKeyValue) }
 
-    val pageText = remember { mutableStateOf("") }
     val pagerState = rememberPagerState(pageCount = { 3 })
     val coroutineScope = rememberCoroutineScope()
-
-    val pages = remember { setOf("Home", "Projects", "About") }
-
-    val setPageText: (Int) -> Unit = { page ->
-        pageText.value = pages.elementAt(page)
-    }
 
     val toPage: (Int) -> Unit = { value ->
         coroutineScope.launch {
@@ -90,40 +80,6 @@ fun App() {
                     Icon(Icons.Outlined.LightMode, contentDescription = "light mode")
                 }
             }
-        }
-    }
-}
-
-// pages
-@Composable
-fun HomePage() {
-    Hero()
-}
-
-@OptIn(ExperimentalFoundationApi::class)
-@Composable
-fun ProjectsPage() {
-    val pagerState = rememberPagerState(pageCount = { 2 })
-
-    VerticalPager(
-        state = pagerState
-    ) { page ->
-        when (page) {
-            0 -> Highlights()
-            1 -> Projects()
-        }
-    }
-}
-
-@OptIn(ExperimentalFoundationApi::class)
-@Composable
-fun AboutPage() {
-    val pagerState = rememberPagerState(pageCount = { 2 })
-
-    VerticalPager(modifier = Modifier.fillMaxHeight(), state = pagerState) { page ->
-        when (page) {
-            0 -> Profile()
-            1 -> AboutPortfolio()
         }
     }
 }

@@ -13,24 +13,13 @@ import androidx.compose.ui.unit.dp
 fun TopNavigationBar(
     modifier: Modifier = Modifier,
     toPage: (Int) -> Unit = {},
-    setPageText: (Int) -> Unit = {}
 ) {
-    val onClick: (Int) -> Unit = { index ->
-        toPage(index)
-        setPageText(index)
-    }
     Row(
         modifier,
         horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally)
     ) {
-        TextButton(onClick = { onClick(0) }) {
-            Text("Home")
-        }
-        TextButton(onClick = { onClick(1) }) {
-            Text("Projects")
-        }
-        TextButton(onClick = { onClick(2) }) {
-            Text("About")
-        }
+        TextButton(onClick = { toPage(0) }) { Text("Home") }
+        TextButton(onClick = { toPage(1) }) { Text("Projects") }
+        TextButton(onClick = { toPage(2) }) { Text("About") }
     }
 }
