@@ -3,13 +3,16 @@ package data.local
 import data.model.Link
 import data.model.Language
 import data.model.Project
+import ferosburnportofolio.composeapp.generated.resources.Res
+import org.jetbrains.compose.resources.ExperimentalResourceApi
 
+@OptIn(ExperimentalResourceApi::class)
 val projectsData = listOf(
     Project(
         projectName = "Github User",
         links = listOf(
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/github-user",
                 description = "repository",
             )
@@ -18,7 +21,7 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "Kotlin",
-                icon = "kotlin" // TODO: change to drawable
+                icon = Res.drawable.ic_kotlin
             )
         ),
         date = "Februari 2024",
@@ -30,12 +33,12 @@ val projectsData = listOf(
         projectName = "Open Music API",
         links = listOf(
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/open-music-api",
                 description = "repository",
             ),
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/open-music-api-queue-consumer",
                 description = "repository (consumer)",
             )
@@ -44,7 +47,7 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "JavaScript",
-                icon = "javascript" // TODO: change to drawable
+                icon = Res.drawable.ic_javascript
             ),
         ),
         frameworksLibraries = listOf("NodeJS", "Hapi", "Postgresql", "Redis", "RabbitMQ"),
@@ -56,7 +59,7 @@ val projectsData = listOf(
         projectName = "Jajan Mania",
         links = listOf(
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/jajanmania-mobile",
                 description = "repository",
             )
@@ -65,7 +68,7 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "Kotlin",
-                icon = "kotlin" // TODO: change to drawable
+                icon = Res.drawable.ic_kotlin
             ),
         ),
         frameworksLibraries = listOf("Jetpack Compose", "Gson", "Retrofit", "Coil", "Material3"),
@@ -80,7 +83,7 @@ val projectsData = listOf(
         projectName = "Data Bencana",
         links = listOf(
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/GG-3-0-Mobile-Engineering/ME14-DataBencana-GG3MEGP0594-SuudiKhoirulAnam",
                 description = "repository",
             )
@@ -89,7 +92,7 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "Kotlin",
-                icon = "kotlin" // TODO: change to drawable
+                icon = Res.drawable.ic_kotlin
             ),
         ),
         frameworksLibraries = listOf("Osmdroid", "Moshi", "Retrofit", "Room", "Coil", "Hilt"),
@@ -104,12 +107,12 @@ val projectsData = listOf(
         projectName = "To Do List App",
         links = listOf(
             Link(
-                icon = "link", // TODO: change to drawable
+                icon = Res.drawable.ic_link,
                 link = "https://to-do-list-ferosburn.vercel.app/",
                 description = "live page",
             ),
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/to-do-list",
                 description = "repository",
             )
@@ -118,15 +121,15 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "HTML",
-                icon = "html" // TODO: change to drawable
+                icon = Res.drawable.ic_html
             ),
             Language(
                 name = "CSS",
-                icon = "css" // TODO: change to drawable
+                icon = Res.drawable.ic_css
             ),
             Language(
                 name = "JavaScript",
-                icon = "javascript" // TODO: change to drawable
+                icon = Res.drawable.ic_javascript
             ),
         ),
         frameworksLibraries = listOf("ReactJS", "vite", "react-dom", "Tailwind"),
@@ -139,7 +142,7 @@ val projectsData = listOf(
         projectName = "My Bookshelf (Android)",
         links = listOf(
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/android-my-bookshelf",
                 description = "repository",
             )
@@ -148,7 +151,7 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "Kotlin",
-                icon = "kotlin" // TODO: change to drawable
+                icon = Res.drawable.ic_kotlin
             )
         ),
         date = "Maret 2023",
@@ -159,12 +162,12 @@ val projectsData = listOf(
         projectName = "Random Quote Machine",
         links = listOf(
             Link(
-                icon = "link", // TODO: change to drawable
+                icon = Res.drawable.ic_link,
                 link = "https://ferosburn.github.io/random-quote-machine/",
                 description = "live page",
             ),
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/random-quote-machine",
                 description = "repository",
             )
@@ -173,15 +176,15 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "HTML",
-                icon = "html" // TODO: change to drawable
+                icon = Res.drawable.ic_html
             ),
             Language(
                 name = "CSS",
-                icon = "css" // TODO: change to drawable
+                icon = Res.drawable.ic_css
             ),
             Language(
                 name = "JavaScript",
-                icon = "javascript" // TODO: change to drawable
+                icon = Res.drawable.ic_javascript
             ),
         ),
         frameworksLibraries = listOf("ReactJS"),
@@ -195,7 +198,7 @@ val projectsData = listOf(
         projectName = "Bookshelf API",
         links = listOf(
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/bookshelf-api",
                 description = "repository",
             )
@@ -204,7 +207,7 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "JavaScript",
-                icon = "javascript" // TODO: change to drawable
+                icon = Res.drawable.ic_javascript
             ),
         ),
         frameworksLibraries = listOf("NodeJS", "Hapi"),
@@ -217,7 +220,7 @@ val projectsData = listOf(
         projectName = "Skilvul UI",
         links = listOf(
             Link(
-                icon = "figma", // TODO: change to drawable
+                icon = Res.drawable.ic_figma,
                 link = "https://www.figma.com/file/shM2nG7UIjTM3sANszc0fK/Lomba-UI%2FUX-IAA-" +
                         "UKDW-x-Skilvul?node-id=0%3A1&t=6YtAr1Fu26sKwjke-1",
                 description = "figma",
@@ -232,12 +235,12 @@ val projectsData = listOf(
         projectName = "Bookshelf App",
         links = listOf(
             Link(
-                icon = "link", // TODO: change to drawable
+                icon = Res.drawable.ic_link,
                 link = "https://ferosburn.github.io/book-shelf/",
                 description = "live page",
             ),
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/book-shelf",
                 description = "repository",
             )
@@ -246,15 +249,15 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "HTML",
-                icon = "html" // TODO: change to drawable
+                icon = Res.drawable.ic_html
             ),
             Language(
                 name = "CSS",
-                icon = "css" // TODO: change to drawable
+                icon = Res.drawable.ic_css
             ),
             Language(
                 name = "JavaScript",
-                icon = "javascript" // TODO: change to drawable
+                icon = Res.drawable.ic_javascript
             ),
         ),
         date = "Juli 2022",
@@ -266,12 +269,12 @@ val projectsData = listOf(
         projectName = "To-Do-List",
         links = listOf(
             Link(
-                icon = "link", // TODO: change to drawable
+                icon = Res.drawable.ic_link,
                 link = "https://ferosburn.github.io/todo-list/",
                 description = "live page",
             ),
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/todo-list",
                 description = "repository",
             )
@@ -280,15 +283,15 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "HTML",
-                icon = "html" // TODO: change to drawable
+                icon = Res.drawable.ic_html
             ),
             Language(
                 name = "CSS",
-                icon = "css" // TODO: change to drawable
+                icon = Res.drawable.ic_css
             ),
             Language(
                 name = "JavaScript",
-                icon = "javascript" // TODO: change to drawable
+                icon = Res.drawable.ic_javascript
             ),
         ),
         frameworksLibraries = listOf("ReactJS"),
@@ -302,12 +305,12 @@ val projectsData = listOf(
         projectName = "Kalkulator",
         links = listOf(
             Link(
-                icon = "link", // TODO: change to drawable
+                icon = Res.drawable.ic_link,
                 link = "https://ferosburn.github.io/kalkulator/",
                 description = "live page",
             ),
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/kalkulator",
                 description = "repository",
             )
@@ -316,15 +319,15 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "HTML",
-                icon = "html" // TODO: change to drawable
+                icon = Res.drawable.ic_html
             ),
             Language(
                 name = "CSS",
-                icon = "css" // TODO: change to drawable
+                icon = Res.drawable.ic_css
             ),
             Language(
                 name = "JavaScript",
-                icon = "javascript" // TODO: change to drawable
+                icon = Res.drawable.ic_javascript
             ),
         ),
         date = "Juni 2022",
@@ -337,7 +340,7 @@ val projectsData = listOf(
         projectName = "UndangApp",
         links = listOf(
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/undangapp",
                 description = "repository",
             )
@@ -346,15 +349,15 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "HTML",
-                icon = "html" // TODO: change to drawable
+                icon = Res.drawable.ic_html
             ),
             Language(
                 name = "CSS",
-                icon = "css" // TODO: change to drawable
+                icon = Res.drawable.ic_css
             ),
             Language(
                 name = "Ruby",
-                icon = "ruby" // TODO: change to drawable
+                icon = Res.drawable.ic_ruby
             ),
         ),
         frameworksLibraries = listOf("Ruby on Rails", "Bootstrap"),
@@ -369,12 +372,12 @@ val projectsData = listOf(
         projectName = "Masakan Nusantara",
         links = listOf(
             Link(
-                icon = "link", // TODO: change to drawable
+                icon = Res.drawable.ic_link,
                 link = "https://ferosburn.github.io/masakan-nusantara/",
                 description = "live page",
             ),
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/masakan-nusantara",
                 description = "repository",
             )
@@ -383,11 +386,11 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "HTML",
-                icon = "html" // TODO: change to drawable
+                icon = Res.drawable.ic_html
             ),
             Language(
                 name = "CSS",
-                icon = "css" // TODO: change to drawable
+                icon = Res.drawable.ic_css
             ),
         ),
         date = "Maret 2022",
@@ -400,7 +403,7 @@ val projectsData = listOf(
         projectName = "Portofolio",
         links = listOf(
             Link(
-                icon = "github", // TODO: change to drawable
+                icon = Res.drawable.ic_github,
                 link = "https://github.com/Ferosburn/ferosburn-portofolio",
                 description = "repository",
             )
@@ -409,11 +412,11 @@ val projectsData = listOf(
         languages = listOf(
             Language(
                 name = "HTML",
-                icon = "html" // TODO: change to drawable
+                icon = Res.drawable.ic_html
             ),
             Language(
                 name = "CSS",
-                icon = "css" // TODO: change to drawable
+                icon = Res.drawable.ic_css
             ),
         ),
         date = "September 2022",

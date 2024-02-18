@@ -1,6 +1,9 @@
 package data.model
 
-data class Language(
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+
+data class Language @OptIn(ExperimentalResourceApi::class) constructor(
     val name: String,
-    val icon: String
+    val icon: DrawableResource
 )
