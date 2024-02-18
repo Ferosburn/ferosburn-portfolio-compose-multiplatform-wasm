@@ -40,7 +40,8 @@ fun InfoTooltipBox(
                     )
                     .padding(horizontal = 8.dp, vertical = 4.dp),
                 color = MaterialTheme.colorScheme.onSurface,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.labelMedium
             )
         },
         state = BasicTooltipState(),
