@@ -1,6 +1,7 @@
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -25,6 +26,7 @@ import kotlinx.browser.localStorage
 import kotlinx.coroutines.launch
 import theme.AppTheme
 import ui.about.AboutPage
+import ui.components.InfoTooltipBox
 import ui.components.TopNavigationBar
 import ui.home.HomePage
 import ui.projects.ProjectsPage
@@ -72,14 +74,28 @@ fun App() {
 
             Button(
                 onClick = { setTheme() },
-                Modifier.align(Alignment.TopEnd).padding(top = 16.dp, end = 24.dp)
+                Modifier.align(Alignment.TopEnd).padding(top = 16.dp, end = 24.dp),
+                contentPadding = PaddingValues(0.dp)
             ) {
-                if (isDarkMode) {
-                    Icon(Icons.Outlined.DarkMode, contentDescription = "dark mode")
-                } else {
-                    Icon(Icons.Outlined.LightMode, contentDescription = "light mode")
+                InfoTooltipBox(
+                    if (isDarkMode) "Change to\nLight Mode" else "Change to\nDark Mode",
+                ) {
+                    if (isDarkMode) {
+                        Icon(
+                            Icons.Outlined.DarkMode,
+                            contentDescription = "dark mode",
+                            Modifier.padding(horizontal = 24.dp, vertical = 8.dp)
+                        )
+                    } else {
+                        Icon(
+                            Icons.Outlined.LightMode,
+                            contentDescription = "light mode",
+                            Modifier.padding(horizontal = 24.dp, vertical = 8.dp)
+                        )
+                    }
                 }
             }
+
         }
     }
 }
