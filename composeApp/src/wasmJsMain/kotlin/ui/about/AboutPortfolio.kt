@@ -24,7 +24,7 @@ fun AboutPortfolio() {
         Box(Modifier.weight(1f).widthIn(max = 640.dp), contentAlignment = Alignment.Center) {
             Text(
                 "This site was developed using Compose Multiplatform powered by " +
-                        "Kotlin/Wasm. I made it in 2024 as self-learning/experiment material." +
+                        "Kotlin/Wasm. I made it in 2024 as self-learning/experiment material. " +
                         "At that moment, the tech itself was in experimental stage. I also " +
                         "wasn’t an expert of this tech. This site purely made with libraries " +
                         "that have been provided by Compose Multiplatform or Kotlin " +
