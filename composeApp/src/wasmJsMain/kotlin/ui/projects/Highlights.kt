@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,10 +19,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import data.local.projectsData
 import ui.components.HighlightsItem
 
 @Composable
 fun Highlights() {
+    val highlightedProjects = projectsData.filter { it.isHighlighted }.take(4)
+
     Column(
         Modifier.fillMaxWidth().heightIn(max = 1024.dp)
             .padding(24.dp, 96.dp, 24.dp, 24.dp),
@@ -36,8 +40,8 @@ fun Highlights() {
             verticalArrangement = Arrangement.spacedBy(24.dp),
             contentPadding = PaddingValues(horizontal = 12.dp)
         ) {
-            items(4) {
-                HighlightsItem()
+            items(highlightedProjects) { project ->
+                HighlightsItem(project)
             }
         }
     }

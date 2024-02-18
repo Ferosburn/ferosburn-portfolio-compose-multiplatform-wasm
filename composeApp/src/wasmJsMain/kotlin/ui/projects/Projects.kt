@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -16,10 +17,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import data.local.projectsData
 import ui.components.ProjectsItem
 
 @Composable
 fun Projects() {
+    val projects = projectsData
+
     Column(
         Modifier.fillMaxWidth().padding(24.dp, 96.dp, 24.dp, 0.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -31,8 +35,8 @@ fun Projects() {
             verticalArrangement = Arrangement.spacedBy(16.dp),
             contentPadding = PaddingValues(8.dp),
         ) {
-            items(30) {
-                ProjectsItem()
+            items(projects) { project ->
+                ProjectsItem(project)
             }
         }
     }
