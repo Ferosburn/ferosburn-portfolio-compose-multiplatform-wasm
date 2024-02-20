@@ -58,7 +58,8 @@ fun App() {
             HorizontalPager(
                 modifier = Modifier.align(Alignment.Center).fillMaxHeight()
                     .background(MaterialTheme.colorScheme.background),
-                state = pagerState
+                state = pagerState,
+                userScrollEnabled = false
             ) { page ->
                 when (page) {
                     0 -> HomePage()
