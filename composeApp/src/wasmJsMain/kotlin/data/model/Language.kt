@@ -3,7 +3,8 @@ package data.model
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 
-data class Language @OptIn(ExperimentalResourceApi::class) constructor(
+@OptIn(ExperimentalResourceApi::class)
+data class Language (
     val name: String,
     val icon: DrawableResource
 )
