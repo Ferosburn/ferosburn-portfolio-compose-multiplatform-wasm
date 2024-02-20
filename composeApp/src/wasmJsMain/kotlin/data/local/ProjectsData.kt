@@ -25,7 +25,16 @@ val projectsData = listOf(
             )
         ),
         date = "Februari 2024",
-        images = listOf(), // TODO: add the images
+        images = listOf(
+            Res.drawable.img_20240201_githubuser_1,
+            Res.drawable.img_20240201_githubuser_2,
+            Res.drawable.img_20240201_githubuser_3,
+            Res.drawable.img_20240201_githubuser_4,
+            Res.drawable.img_20240201_githubuser_5,
+            Res.drawable.img_20240201_githubuser_6,
+            Res.drawable.img_20240201_githubuser_7,
+            Res.drawable.img_20240201_githubuser_8,
+        ),
         description = "Submission untuk kelas Dicoding Belajar Fundamental Aplikasi Android",
         isHighlighted = true
     ),
@@ -52,7 +61,6 @@ val projectsData = listOf(
         ),
         frameworksLibraries = listOf("NodeJS", "Hapi", "Postgresql", "Redis", "RabbitMQ"),
         date = "Desember 2023",
-        images = listOf(), // TODO: add the images
         description = "Submission api untuk kelas Dicoding Belajar Fundamental Aplikasi Back-End",
     ),
     Project(
@@ -73,7 +81,16 @@ val projectsData = listOf(
         ),
         frameworksLibraries = listOf("Jetpack Compose", "Gson", "Retrofit", "Coil", "Material3"),
         date = "November 2023",
-        images = listOf(), // TODO: add the images
+        images = listOf(
+            Res.drawable.img_20231101_jajanmania_1,
+            Res.drawable.img_20231101_jajanmania_2,
+            Res.drawable.img_20231101_jajanmania_3,
+            Res.drawable.img_20231101_jajanmania_4,
+            Res.drawable.img_20231101_jajanmania_5,
+            Res.drawable.img_20231101_jajanmania_6,
+            Res.drawable.img_20231101_jajanmania_7,
+            Res.drawable.img_20231101_jajanmania_8,
+        ),
         description = "Sebuah aplikasi android yang memudahkan pembeli menemukan pedagang " +
                 "kaki lima favoritnya. Capstone Project Generasi Gigih 3.0 by GoTo Impact " +
                 "Foundation dengan Toko Dizital sebagai industry partner.",
@@ -97,7 +114,11 @@ val projectsData = listOf(
         ),
         frameworksLibraries = listOf("Osmdroid", "Moshi", "Retrofit", "Room", "Coil", "Hilt"),
         date = "Agustus 2023",
-        images = listOf(), // TODO: add the images
+        images = listOf(
+            Res.drawable.img_20230801_databencana_1,
+            Res.drawable.img_20230801_databencana_2,
+            Res.drawable.img_20230801_databencana_3,
+        ),
         description = "Sebuah aplikasi android yang menampilkan data bencana-bencana yang " +
                 "ada di Indonesia. Aplikasi ini menggunakan data dari API PetaBencana.id. " +
                 "Tugas akhir individu sesi kelas Generasi Gigih 3.0 by GoTo Impact Foundation.",
@@ -134,7 +155,10 @@ val projectsData = listOf(
         ),
         frameworksLibraries = listOf("ReactJS", "vite", "react-dom", "Tailwind"),
         date = "Mei 2023",
-        images = listOf(), // TODO: add the images
+        images = listOf(
+            Res.drawable.img_20230501_todolistapp_1,
+            Res.drawable.img_20230501_todolistapp_2,
+        ),
         description = "Hasil dari devcode challenge react js",
         isHighlighted = true
     ),
@@ -155,7 +179,12 @@ val projectsData = listOf(
             )
         ),
         date = "Maret 2023",
-        images = listOf(), // TODO: add the images
+        images = listOf(
+            Res.drawable.img_20230302_mybookshelf_1,
+            Res.drawable.img_20230302_mybookshelf_2,
+            Res.drawable.img_20230302_mybookshelf_3,
+            Res.drawable.img_20230302_mybookshelf_4,
+        ),
         description = "Submission untuk kelas Dicoding Belajar Membuat Aplikasi Android untuk Pemula",
     ),
     Project(
@@ -189,7 +218,10 @@ val projectsData = listOf(
         ),
         frameworksLibraries = listOf("ReactJS"),
         date = "Maret 2023",
-        images = listOf(), // TODO: add the images
+        images = listOf(
+            Res.drawable.img_20230301_randomquote_1,
+            Res.drawable.img_20230301_randomquote_2,
+        ),
         description = "Sebuah halaman web yang dapat menghasilkan kutipan secara random dan " +
                 "dapat membagikan ke twitter sebagai sebuah tweet. Submission untuk Front End " +
                 "Development Libraries Projects dari freeCodeCamp",
@@ -212,7 +244,6 @@ val projectsData = listOf(
         ),
         frameworksLibraries = listOf("NodeJS", "Hapi"),
         date = "Februari 2023",
-        images = listOf(), // TODO: add the images
         description = "Submission api untuk kelas Dicoding Belajar Membuat Aplikasi Back-End " +
                 "untuk Pemula",
     ),
@@ -227,7 +258,10 @@ val projectsData = listOf(
             )
         ),
         date = "Juli 2022",
-        images = listOf(), // TODO: add the images
+        images = listOf(
+            Res.drawable.img_20220702_skilvului_1,
+            Res.drawable.img_20220702_skilvului_2,
+        ),
         description = "Submission desain UI homepage website Skilvul untuk lomba UI/UX IAA " +
                 "UKDW x Skilvul 2022",
     ),
@@ -261,7 +295,10 @@ val projectsData = listOf(
             ),
         ),
         date = "Juli 2022",
-        images = listOf(), // TODO: add the images
+        images = listOf(
+            Res.drawable.img_20220701_bookshelfapp_1,
+            Res.drawable.img_20220701_bookshelfapp_2,
+        ),
         description = "Submission webpage untuk kelas Dicoding Belajar Membuat Front-End Web " +
                 "untuk Pemula",
     ),
@@ -295,8 +332,10 @@ val projectsData = listOf(
             ),
         ),
         frameworksLibraries = listOf("ReactJS"),
-        date = "Juni 2023",
-        images = listOf(), // TODO: add the images
+        date = "Juni 2022",
+        images = listOf(
+            Res.drawable.img_20220602_todolist_1,
+        ),
         description = "Proyek pribadi dibuat untuk memenuhi tugas membuat todo-list " +
                 "menggunakan framework ReactJS dari pelatihan DTS FGA Progate ReactJS for " +
                 "Web Development.",
@@ -331,7 +370,10 @@ val projectsData = listOf(
             ),
         ),
         date = "Juni 2022",
-        images = listOf(), // TODO: add the images
+        images = listOf(
+            Res.drawable.img_20220601_kalkulator_1,
+            Res.drawable.img_20220601_kalkulator_2,
+        ),
         description = "Proyek pribadi dibuat untuk memenuhi tugas membuat kalkulator " +
                 "menggunakan JavaScript dari pelatihan DTS FGA Progate ReactJS for Web " +
                 "Development.",
@@ -362,7 +404,13 @@ val projectsData = listOf(
         ),
         frameworksLibraries = listOf("Ruby on Rails", "Bootstrap"),
         date = "April 2022",
-        images = listOf(), // TODO: add the images
+        images = listOf(
+            Res.drawable.img_20220401_undangapp_1,
+            Res.drawable.img_20220401_undangapp_2,
+            Res.drawable.img_20220401_undangapp_3,
+            Res.drawable.img_20220401_undangapp_4,
+            Res.drawable.img_20220401_undangapp_5,
+        ),
         description = "Proyek pribadi iseng setelah melakukan pelatihan DTS FGA Progate " +
                 "Full Stack Developer with Ruby (HTML, CSS, Ruby, Ruby on Rails). Saya " +
                 "membuat proyek ini untuk mengukur dan mengembangkan kemampuan saya dalam " +
@@ -394,7 +442,11 @@ val projectsData = listOf(
             ),
         ),
         date = "Maret 2022",
-        images = listOf(), // TODO: add the images
+        images = listOf(
+            Res.drawable.img_20220301_masakan_1,
+            Res.drawable.img_20220301_masakan_2,
+            Res.drawable.img_20220301_masakan_3,
+        ),
         description = "Proyek ini dikerjakan secara tim dan dibuat untuk tugas HTML dan CSS " +
                 "dari pelatihan DTS FGA Progate Full Stack Developer with Ruby (HTML, CSS, " +
                 "Ruby, Ruby on Rails).",
@@ -419,8 +471,11 @@ val projectsData = listOf(
                 icon = Res.drawable.ic_css
             ),
         ),
-        date = "September 2022",
-        images = listOf(), // TODO: add the images
+        date = "September 2021",
+        images = listOf(
+            Res.drawable.img_20210901_portofolio_1,
+            Res.drawable.img_20210901_portofolio_2
+        ),
         description = "Tugas akhir individu untuk pelatihan dari Kode ID Belajar Langkah " +
                 "Fundamental untuk Menjadi Web Developer",
     ),
