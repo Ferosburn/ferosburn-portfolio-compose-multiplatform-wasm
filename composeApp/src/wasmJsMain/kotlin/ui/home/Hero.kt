@@ -12,9 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import data.local.projectsData
 
 @Composable
 fun Hero() {
+    val lastUpdate = projectsData.first().date
+
     Box(Modifier.fillMaxWidth().fillMaxHeight().padding(24.dp, 96.dp, 24.dp, 24.dp)) {
         // top center with some margin on top
         Text(
@@ -37,7 +40,7 @@ fun Hero() {
             "An archive of my projects from 2021 to 2024\n" +
                     "It’s best to see in PC or landscape screen\n" +
                     "This site developed using Compose Mutliplatform, powered by Kotlin/Wasm\n" +
-                    "Last update: MMMM YYYY",
+                    "Last update: $lastUpdate",
             Modifier.align(Alignment.BottomEnd).fillMaxWidth(0.4f),
             textAlign = TextAlign.End,
             color = MaterialTheme.colorScheme.onBackground
