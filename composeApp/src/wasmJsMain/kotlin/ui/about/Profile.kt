@@ -60,9 +60,11 @@ fun Profile() {
                 Modifier.widthIn(max = 1024.dp).heightIn(max = 360.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Box(
-                    Modifier.size(360.dp, 360.dp).background(Color.LightGray)
-                ) // TODO: replace with image/async image
+                Image(
+                    imageResource(Res.drawable.img_profile_picture),
+                    null,
+                    Modifier.size(360.dp, 360.dp)
+                )
                 Spacer(Modifier.width(36.dp))
                 Column {
                     Text(
